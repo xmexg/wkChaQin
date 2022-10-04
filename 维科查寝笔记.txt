@@ -1,0 +1,300 @@
+获取任意学号的access_token
+post
+POST /app/auth/getAccessToken HTTP/1.1
+Host: xgjktb.wfust.edu.cn
+Content-Length: 26
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 12; M2101K9C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36lantuMobilecampus lantuMC
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://xgjktb.wfust.edu.cn
+Referer: http://xgjktb.wfust.edu.cn/dist/student/2daoIndex.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+username=2021020221&flag=0
+
+响应
+HTTP/1.1 200 
+Date: Tue, 04 Oct 2022 13:52:28 GMT
+Content-Type: application/json;charset=UTF-8
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: :x-requested-with,content-type
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+Server: WebServer
+Content-Length: 287
+
+{"code":0,"msg":"操作成功","data":{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBUFAiLCJpc3MiOiJTZXJ2aWNlIiwiZXhwIjoxNjY0ODk4NzQ4LCJ1c2VySWQiOiI2NDUyYTFjOS1hOWE1LTQyMDItODI2MC00NzFkODA3YzE1MmYiLCJpYXQiOjE2NjQ4OTE1NDh9.F--lPz1dsB44Bt2a-gcbGVS54J7UpTax-Xtnwm3h5IY"}}
+
+
+
+
+获取指定token的签到任务
+post
+POST /app/student/getSignsByMonth HTTP/1.1
+Host: xgjktb.wfust.edu.cn
+Content-Length: 278
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 12; M2101K9C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36lantuMobilecampus lantuMC
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://xgjktb.wfust.edu.cn
+Referer: http://xgjktb.wfust.edu.cn/dist/student/2daoList.html?type=1
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBUFAiLCJpc3MiOiJTZXJ2aWNlIiwiZXhwIjoxNjY0ODk4NzM3LCJ1c2VySWQiOiI2NDUyYTFjOS1hOWE1LTQyMDItODI2MC00NzFkODA3YzE1MmYiLCJpYXQiOjE2NjQ4OTE1Mzd9.LHrLW0e6drLpBxA3JwN89iG6S8m6FNg1lfk4fLshQ4g&month=2022-10&taskType=1&signFlag=1
+
+响应
+HTTP/1.1 200 
+Date: Tue, 04 Oct 2022 13:52:17 GMT
+Content-Type: application/json;charset=UTF-8
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: :x-requested-with,content-type
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+Server: WebServer
+Content-Length: 215
+
+{"code":0,"msg":"操作成功","data":{"signs":[{"task_name":"计算机学院查寝","sign_flag":1,"user_id":"6452a1c9-a9a5-4202-8260-471d807c152f","available_date":"2022-10-04","sign_time":"2022-10-04 21:27:40"}]}}
+
+
+
+
+获取指定token的用户信息1
+post
+POST /app/student/getSignSummary HTTP/1.1
+Host: xgjktb.wfust.edu.cn
+Content-Length: 267
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 12; M2101K9C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36lantuMobilecampus lantuMC
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://xgjktb.wfust.edu.cn
+Referer: http://xgjktb.wfust.edu.cn/dist/student/2daoHis.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBUFAiLCJpc3MiOiJTZXJ2aWNlIiwiZXhwIjoxNjY0ODk4NzQyLCJ1c2VySWQiOiI2NDUyYTFjOS1hOWE1LTQyMDItODI2MC00NzFkODA3YzE1MmYiLCJpYXQiOjE2NjQ4OTE1NDJ9.mqPbwxqA7tTbOPmYveFIj68lcX4eicwYXAeq4gxjYMM&month=2022-10&taskType=1
+
+响应
+HTTP/1.1 200 
+Date: Tue, 04 Oct 2022 13:52:23 GMT
+Content-Type: application/json;charset=UTF-8
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: :x-requested-with,content-type
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+Server: WebServer
+Content-Length: 496
+
+{"code":0,"msg":"操作成功","data":{"signSummary":{"asDirectorCount":0,"shouldSignCount":28,"unSignCount":27,"signCount":1,"user":{"njmc":"2021","yxid":"001005","zyid":"001005003","njid":"001005003011","user_tel":"","user_name":"徐光鑫","zymc":"软件技术","bjid":"001005003011001","yxmc":"计算机学院","user_card":"37142520030428607X","user_sex":"1","bjmc":"2021级软件1班","student_no":"2021020221","user_id":"6452a1c9-a9a5-4202-8260-471d807c152f","user_realname":"徐光鑫"}}}}
+
+
+
+
+获取指定token的用户信息2
+post
+POST /app/student/getStudentInfo HTTP/1.1
+Host: xgjktb.wfust.edu.cn
+Content-Length: 242
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 12; M2101K9C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36lantuMobilecampus lantuMC
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://xgjktb.wfust.edu.cn
+Referer: http://xgjktb.wfust.edu.cn/dist/student/2daoHis.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBUFAiLCJpc3MiOiJTZXJ2aWNlIiwiZXhwIjoxNjY0ODk4NzQyLCJ1c2VySWQiOiI2NDUyYTFjOS1hOWE1LTQyMDItODI2MC00NzFkODA3YzE1MmYiLCJpYXQiOjE2NjQ4OTE1NDJ9.mqPbwxqA7tTbOPmYveFIj68lcX4eicwYXAeq4gxjYMM
+
+响应
+HTTP/1.1 200 
+Date: Tue, 04 Oct 2022 13:52:23 GMT
+Content-Type: application/json;charset=UTF-8
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: :x-requested-with,content-type
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+Server: WebServer
+Content-Length: 411
+
+{"code":0,"msg":"操作成功","data":{"student":{"njmc":"2021","yxid":"001005","zyid":"001005003","njid":"001005003011","user_tel":"","user_name":"徐光鑫","zymc":"软件技术","bjid":"001005003011001","yxmc":"计算机学院","user_card":"37142520030428607X","user_sex":"1","bjmc":"2021级软件1班","student_no":"2021020221","user_id":"6452a1c9-a9a5-4202-8260-471d807c152f","user_realname":"徐光鑫"}}}
+
+
+
+
+
+
+获取查询所有记录
+post：
+POST /app/student/getTasks HTTP/1.1
+Host: xgjktb.wfust.edu.cn
+Content-Length: 278
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 12; M2101K9C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36lantuMobilecampus lantuMC
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://xgjktb.wfust.edu.cn
+Referer: http://xgjktb.wfust.edu.cn/dist/student/2daoIndex.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBUFAiLCJpc3MiOiJTZXJ2aWNlIiwiZXhwIjoxNjY0ODk4NzQ4LCJ1c2VySWQiOiI2NDUyYTFjOS1hOWE1LTQyMDItODI2MC00NzFkODA3YzE1MmYiLCJpYXQiOjE2NjQ4OTE1NDh9.F--lPz1dsB44Bt2a-gcbGVS54J7UpTax-Xtnwm3h5IY&endFlag=0&page=1&taskType=1&rows=10
+
+
+响应
+HTTP/1.1 200 
+Date: Tue, 04 Oct 2022 13:52:28 GMT
+Content-Type: application/json;charset=UTF-8
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: :x-requested-with,content-type
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+Server: WebServer
+Content-Length: 697
+
+{"code":0,"msg":"操作成功","data":{"tasksCount":1,"tasks":[{"task_name":"计算机学院查寝","end_date":"2022-12-31","weeks":"1,2,3,4,5,6,7","begin_date":"2022-10-04","task_id":"0391b5a7-7267-4242-a430-2bb6b318cdd4","opt_begin_time":"21:00:00","frequency":"1","mode":"1","update_time":null,"update_user":null,"director_flag":null,"place_id":"c823b98a-2970-4ef8-9b29-5da66c691384","all_count":152,"photo_flag":"1","place_name":"潍坊科技学院","director_type":"","create_time":"2022-10-04 20:10:51","opt_end_time":"21:50:00","user_id":"8dc53b88-1242-499d-a939-b264b75912ae","director_name":null,"within_flag":null,"create_user":null,"task_type":"1","category":null,"director_id":null}]}}
+
+
+
+
+获取指定的查寝任务
+post
+POST /app/task/getTaskByTaskId HTTP/1.1
+Host: xgjktb.wfust.edu.cn
+Content-Length: 286
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 12; M2101K9C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36lantuMobilecampus lantuMC
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://xgjktb.wfust.edu.cn
+Referer: http://xgjktb.wfust.edu.cn/dist/student/2daoDetail.html?id=0391b5a7-7267-4242-a430-2bb6b318cdd4&flag=2
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBUFAiLCJpc3MiOiJTZXJ2aWNlIiwiZXhwIjoxNjY0ODk4NTgxLCJ1c2VySWQiOiI2NDUyYTFjOS1hOWE1LTQyMDItODI2MC00NzFkODA3YzE1MmYiLCJpYXQiOjE2NjQ4OTEzODF9.xlbqi7BGsOrpzzhwkwiF8I1lIoh2hQZIu_p_Oted0uQ&taskId=0391b5a7-7267-4242-a430-2bb6b318cdd4
+
+
+
+
+查寝图片上传
+post
+POST /generic/transPic2TempForBase64 HTTP/1.1
+Host: xgjktb.wfust.edu.cn
+Content-Length: 1022621
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 12; M2101K9C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36lantuMobilecampus lantuMC
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://xgjktb.wfust.edu.cn
+Referer: http://xgjktb.wfust.edu.cn/dist/student/2daoDetail.html?id=0391b5a7-7267-4242-a430-2bb6b318cdd4&flag=2
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBUFAiLCJpc3MiOiJTZXJ2aWNlIiwiZXhwIjoxNjY0ODk4NTgxLCJ1c2VySWQiOiI2NDUyYTFjOS1hOWE1LTQyMDItODI2MC00NzFkODA3YzE1MmYiLCJpYXQiOjE2NjQ4OTEzODF9.xlbqi7BGsOrpzzhwkwiF8I1lIoh2hQZIu_p_Oted0uQ&file=data%3Aimage%2Fjpeg%3Bbase64%2C%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAIQAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAA。。。。。。。
+
+响应
+HTTP/1.1 200 
+Date: Tue, 04 Oct 2022 13:50:00 GMT
+Content-Type: application/json;charset=UTF-8
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: :x-requested-with,content-type
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+Server: WebServer
+Content-Length: 109
+
+{"code":0,"msg":"图片上传成功","data":{"filePath":"upload/temp/6b505f067dc04a7aba688432d065f626.jpeg"}}
+
+
+
+
+开始查寝签到
+post
+POST /app/student/sign HTTP/1.1
+Host: xgjktb.wfust.edu.cn
+Content-Length: 349
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 12; M2101K9C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36lantuMobilecampus lantuMC
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://xgjktb.wfust.edu.cn
+Referer: http://xgjktb.wfust.edu.cn/dist/student/2daoDetail.html?id=0391b5a7-7267-4242-a430-2bb6b318cdd4&flag=2
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBUFAiLCJpc3MiOiJTZXJ2aWNlIiwiZXhwIjoxNjY0ODk4NTgxLCJ1c2VySWQiOiI2NDUyYTFjOS1hOWE1LTQyMDItODI2MC00NzFkODA3YzE1MmYiLCJpYXQiOjE2NjQ4OTEzODF9.xlbqi7BGsOrpzzhwkwiF8I1lIoh2hQZIu_p_Oted0uQ&taskId=0391b5a7-7267-4242-a430-2bb6b318cdd4&filePath=upload%2Ftemp%2F6b505f067dc04a7aba688432d065f626.jpeg
+
+响应
+HTTP/1.1 200 
+Date: Tue, 04 Oct 2022 13:50:03 GMT
+Content-Type: application/json;charset=UTF-8
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: :x-requested-with,content-type
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+Server: WebServer
+Content-Length: 68
+
+{"code":1001,"msg":"不在允许的任务时间范围内","data":{}}
+
